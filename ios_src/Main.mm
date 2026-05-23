@@ -42,10 +42,10 @@ void* MemoryThread(void* arg) {
         // Sebagai gantinya, kita cukup cek apakah `bmInst` dan `logicBmInst` tidak null.
         // Jika tidak null, berarti kita sedang berada di dalam match/room.
         
-        g_Battle.dbg_bmInst = (uintptr_t)bmInst;
+        .dbg_bmInst = (uintptr_t)bmInst;
         g_Battle.dbg_logicBmInst = (uintptr_t)logicBmInst;
         g_Battle.dbg_battleState = 6; // Dummy state for debug overlay
-
+g_Battle
         if (bmInst && logicBmInst) {
             g_Battle.Update((uintptr_t)bmInst, (uintptr_t)logicBmInst);
         } else {
